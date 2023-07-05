@@ -1,2 +1,2 @@
 #!/bin/bash
-cp [:uper:]* /tmp/u
+mv [:uper:]* /tmp/u
