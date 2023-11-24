@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+for item in *
+do
+	item=$(echo "$item" | cut -d'-' -f2-)
+	echo "$item"
+done

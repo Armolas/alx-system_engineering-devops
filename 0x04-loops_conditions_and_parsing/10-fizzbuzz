@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+i=1
+while [ $i -le 20 ]
+do
+    rem5=$((i % 5))
+    rem3=$((i % 3))
+    if [ "$rem5" -eq 0 ] && [ "$rem3" -eq 0 ]
+    then
+        echo "FizzBuzz"
+    elif [ "$rem5" -eq 0 ]
+    then
+        echo "Buzz"
+    elif [ "$rem3" -eq 0 ]
+    then
+        echo "Fizz"
+    else
+        echo "$i"
+    fi
+    ((i++))
+done
