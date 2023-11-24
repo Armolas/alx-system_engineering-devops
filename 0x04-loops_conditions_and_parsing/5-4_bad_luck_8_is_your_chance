@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# prints best school 10 times with variations in 4th and 8th
 i=1
 while [ $i -le 10 ]
 do

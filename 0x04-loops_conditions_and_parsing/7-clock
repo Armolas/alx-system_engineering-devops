@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# prints all 12 hours of the day
 hour=0
 while [ $hour -le 12 ]
 do

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# checks for existence of school in directory
 file="school"
 if [ -e $file ]
 then
