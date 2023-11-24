@@ -2,8 +2,11 @@
 #prints the /etc/passwd file in a list
 
 list=$(cat /etc/passwd)
-for item in "$list"
+index=0
+while [ $index -lt ${#list[@]} ]
 do
+	item=${list[$index]}
 	item=$(echo "$item" | cut -d':' -f1,3,6)
 	echo "$item"
+	((index++))
 done
