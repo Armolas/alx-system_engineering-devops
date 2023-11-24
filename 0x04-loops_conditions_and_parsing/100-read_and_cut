@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#prints the /etc/passwd file in a list
+
+list=$(cat /etc/passwd)
+for item in "$list"
+do
+	item=$(echo "$item" | cut -d':' -f1,3,6)
+	echo "$item"
+done
