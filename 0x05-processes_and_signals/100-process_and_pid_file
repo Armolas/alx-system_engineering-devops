@@ -8,5 +8,4 @@ do
 	trap 'echo "Y U no love me?!"' SIGINT
 	trap 'rm /var/run/myscript.pid' SIGQUIT
 	echo "To infinity and beyond"
-	sleep 2
 done
