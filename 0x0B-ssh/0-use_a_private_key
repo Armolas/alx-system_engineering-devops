@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# enters a remote machine
+ssh ubuntu@52.91.157.80 -i ~/.ssh/school
