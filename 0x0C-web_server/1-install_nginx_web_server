@@ -8,9 +8,11 @@ echo "server {
         listen 80;
         listen [::]:80;
 
-        root /var/www/html/;
-        index index.html index.htm;
         server_name _;
+        location / {
+                root /var/www/html/;
+                index index.html index.htm;
+        }
 }" > /etc/nginx/sites-available/default
 nginx -t
 service nginx restart
