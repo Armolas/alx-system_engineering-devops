@@ -2,12 +2,15 @@
 # installs nginx and configures it
 apt-get update
 apt-get -y install nginx
+
+echo "Hello World!" > /var/www/html/index.html
 echo "server {
         listen 80;
         listen [::]:80;
 
         root /var/www/html/;
-        server_name localhost;
+        index index.html index.htm;
+        server_name _;
 }" > /etc/nginx/sites-available/default
-echo "Hello World!" > /var/www/html/index.html
+nginx -t
 service nginx restart
