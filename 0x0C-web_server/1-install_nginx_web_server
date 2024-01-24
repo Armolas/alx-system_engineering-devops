@@ -6,7 +6,8 @@ echo "server {
         listen 80;
         listen [::]:80;
 
-        . . .
+        root /var/www/html/;
+        server_name localhost;
 }" > /etc/nginx/sites-available/default
 echo "Hello World!" > /var/www/html/index.html
 service nginx restart
