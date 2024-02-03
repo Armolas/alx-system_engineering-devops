@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-#this scrit restarts an apache server
-sudo docker exec 120c0d63edb5 service apache2 restart
-curl 0:8080
+#this script restarts an apache server
+service apache2 restart
