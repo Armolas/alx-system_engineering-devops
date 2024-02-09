@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#displays information about subdomains.
+check_domain ()
+{
+    r_type=$(dig "$2.$1" | grep -A1 'ANSWER SECTION' | awk 'NR==2 {print $4}')
+    addr=$(dig "$2.$1" | grep -A1 'ANSWER SECTION' | awk 'NR==2 {print $5}')
+    echo "The subdomain $2 is a $r_type record and points to $addr"
+}
+if [ -z $2 ]
+then
+    check_domain "$1" "www"
+    check_domain "$1" "lb-01"
+    check_domain "$1" "web-01"
+    check_domain "$1" "web-02"
+else
+    check_domain "$1" "$2"
+fi
