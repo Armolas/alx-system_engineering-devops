@@ -9,5 +9,5 @@ DIR="/tmp/mysql_bk"
 mkdir -p $DIR
 mysqldump -u root -p$PASSWD --all-databases > "$DIR/$DUMP_FILE"
 tar -czf "${DIR}/${ARCHIVE}" -c "$DIR" "$DUMP_FILE"
-rm "${DIR}/${DUMP_FILE}"
+mv "${DIR}/${DUMP_FILE}" .
 mv "${DIR}/${ARCHIVE}" .
