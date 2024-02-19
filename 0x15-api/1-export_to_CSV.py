@@ -11,7 +11,7 @@ def create_csv(user_id):
     users = users.json()
     todos = requests.get(todo_url)
     todos = todos.json()
-    filename = f"{user_id}.csv"
+    filename = f"{str(user_id)}.csv"
     for user in users:
         if user['id'] == user_id:
             name = user['name']
