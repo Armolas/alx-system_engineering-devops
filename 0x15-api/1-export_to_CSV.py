@@ -19,8 +19,8 @@ def create_csv(user_id):
     with open(filename, 'w') as file:
         for todo in todos:
             if todo['userId'] == user_id:
-                line = f"\"{str(user_id)}\",\"{str(name)}\",\
-\"{todo['completed']}\",\"{todo['title']}\"\n"
+                line = f"\"{str(user_id)}\",\"{name}\",\
+\"{str(todo['completed'])}\",\"{todo['title']}\"\n"
                 file.write(line)
 
 
