@@ -31,4 +31,5 @@ def get_todo(userId):
         print(f"\t {task}")
 
 
-get_todo(int(sys.argv[1]))
+if __name__ == "__main__":
+    get_todo(int(sys.argv[1]))
