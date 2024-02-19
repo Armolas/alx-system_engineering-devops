@@ -14,7 +14,7 @@ def create_csv(user_id):
     filename = f"{str(user_id)}.csv"
     for user in users:
         if user['id'] == user_id:
-            name = user['name']
+            name = user['username']
             break
     with open(filename, 'w') as file:
         for todo in todos:
