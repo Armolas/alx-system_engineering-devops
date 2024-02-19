@@ -26,7 +26,7 @@ def get_todo(userId):
         if user['id'] == userId:
             name = user['name']
             break
-    print("Employee {} is done with tasks({}/{})".format(name, completed, task_no))
+    print(f"Employee {name} is done with tasks({completed}/{task_no}):")
     for task in tasks:
         print(f"\t {task}")
 
