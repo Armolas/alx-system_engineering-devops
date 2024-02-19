@@ -18,7 +18,7 @@ def get_todo(userId):
     tasks = []
     for todo in todos:
         if todo['userId'] == userId:
-            if todo['completed'] == True:
+            if todo['completed'] is True:
                 completed += 1
                 tasks.append(todo['title'])
             task_no += 1
@@ -29,4 +29,6 @@ def get_todo(userId):
     print(f"Employee {name} is done with tasks({completed}/{task_no})")
     for task in tasks:
         print(f"\t {task}")
+
+
 get_todo(int(sys.argv[1]))
