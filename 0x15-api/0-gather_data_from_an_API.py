@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """returns information about an employee todo list"""
 import requests
 import sys
