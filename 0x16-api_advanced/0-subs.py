@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This is the module to query a subreddit"""
 import requests
 
 
