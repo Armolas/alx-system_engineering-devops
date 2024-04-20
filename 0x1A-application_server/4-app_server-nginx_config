@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name 54.157.182.168;
+    server_name armolas.tech;
 
     location /api/ {
         include proxy_params;
